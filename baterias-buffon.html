@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baterias Buffon · Heliar, Moura e Premium com especificações técnicas</title>
+  <title>Baterias Buffon · Heliar, Moura e Premium | Cascavel</title>
   <meta name="description" content="Baterias Heliar, Moura e Premium em Cascavel. Especificações de voltagem, amperagem e informações técnicas. Troca rápida e entrega grátis.">
   <meta name="keywords" content="bateria 60ah, bateria 12v, bateria heliar, moura 70ah, bateria premium, troca de bateria cascavel">
   <meta name="author" content="Baterias Buffon">
@@ -25,20 +25,23 @@
     }
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #ffffff;
-      color: #202124;
+      background-color: #f5f7fa; /* fundo mais suave que branco puro */
+      color: #1e2a3a; /* tom mais escuro para contraste suave */
       line-height: 1.6;
       scroll-behavior: smooth;
     }
     :root {
-      --primary: #1a73e8;
-      --primary-dark: #1557b0;
+      --primary: #1a5fb4; /* azul mais suave que o anterior */
+      --primary-dark: #0f3d7a;
       --cta-green: #25D366;
-      --gray-bg: #f8f9fa;
-      --border-light: #dadce0;
-      --heliar: #d93025;
-      --moura: #188038;
-      --premium: #b35e14;
+      --gray-bg: #eef2f6; /* fundo de seções mais quente */
+      --border-light: #d0d9e4;
+      --heliar: #c5221f; /* vermelho mais equilibrado */
+      --moura: #0e6b2b;
+      --premium: #a86414;
+      --card-bg: #ffffff; /* cards ainda brancos mas com sombra */
+      --text-dark: #1e2a3a;
+      --text-soft: #2c3e50;
     }
     .container {
       width: 90%;
@@ -47,11 +50,12 @@
     }
     /* HEADER */
     header {
-      background-color: white;
-      box-shadow: 0 1px 6px 0 rgba(0,0,0,0.1);
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
       position: sticky;
       top: 0;
       z-index: 1000;
+      border-bottom: 1px solid #e3e9f0;
     }
     .header-content {
       display: flex;
@@ -62,7 +66,7 @@
     .logo h1 {
       font-size: 1.8rem;
       font-weight: 500;
-      color: #202124;
+      color: #1e2a3a;
       letter-spacing: -0.5px;
     }
     .logo span {
@@ -83,7 +87,7 @@
     .nav-links li a {
       text-decoration: none;
       font-weight: 500;
-      color: #3c4043;
+      color: #2c3e50;
       transition: color 0.2s;
       font-size: 1rem;
       padding: 0.3rem 0;
@@ -93,10 +97,10 @@
       color: var(--primary);
       border-bottom-color: var(--primary);
     }
-    /* destaque para as marcas no menu */
-    .nav-links li a.hel { color: #d93025; }
-    .nav-links li a.mou { color: #188038; }
-    .nav-links li a.pre { color: #b35e14; }
+    .nav-links li a.hel { color: #c5221f; }
+    .nav-links li a.mou { color: #0e6b2b; }
+    .nav-links li a.pre { color: #a86414; }
+    
     .btn-wpp-nav {
       background-color: var(--cta-green);
       color: white !important;
@@ -122,15 +126,16 @@
     .menu-toggle span {
       width: 28px;
       height: 3px;
-      background: #202124;
+      background: #1e2a3a;
       margin: 3px 0;
       border-radius: 3px;
       transition: 0.2s;
     }
     /* hero */
     .hero {
-      background: linear-gradient(125deg, #f8f9fa 0%, #eef1f5 100%);
+      background: linear-gradient(135deg, #e9eef3 0%, #dae1e9 100%);
       padding: 4rem 0;
+      border-bottom: 1px solid #cdd6e0;
     }
     .hero .container {
       display: flex;
@@ -146,11 +151,11 @@
       font-weight: 500;
       line-height: 1.2;
       margin-bottom: 1rem;
-      color: #202124;
+      color: #1e2a3a;
     }
     .hero-text p {
       font-size: 1.2rem;
-      color: #5f6368;
+      color: #2c3e50;
       margin-bottom: 2rem;
     }
     .hero-cta {
@@ -161,14 +166,14 @@
     .btn {
       display: inline-block;
       background-color: white;
-      border: 1px solid var(--border-light);
+      border: 1px solid #cbd5e1;
       padding: 0.8rem 2rem;
       border-radius: 48px;
       font-weight: 500;
       text-decoration: none;
-      color: #202124;
+      color: #1e2a3a;
       transition: all 0.2s;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.02);
     }
     .btn-primary {
       background-color: var(--primary);
@@ -177,18 +182,18 @@
     }
     .btn-primary:hover {
       background-color: var(--primary-dark);
-      box-shadow: 0 4px 8px rgba(26,115,232,0.3);
+      box-shadow: 0 4px 10px rgba(26,95,180,0.25);
     }
     .hero-image img {
       max-width: 100%;
       width: 380px;
+      filter: drop-shadow(0 6px 10px rgba(0,0,0,0.1));
     }
 
-    /* seção marcas com resumo técnico */
+    /* tech summary cards com fundo */
     .tech-summary {
       padding: 3rem 0;
-      background-color: white;
-      border-bottom: 1px solid var(--border-light);
+      background-color: #f0f4f9; /* leve tom */
     }
     .tech-grid {
       display: flex;
@@ -199,15 +204,16 @@
     .tech-card {
       flex: 1 1 280px;
       max-width: 350px;
-      background: var(--gray-bg);
+      background: #ffffff;
       border-radius: 2rem;
       padding: 2rem 1.5rem;
       transition: transform 0.2s;
-      border: 1px solid var(--border-light);
+      border: 1px solid #dde3ea;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.02);
     }
     .tech-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 20px rgba(0,0,0,0.06);
+      box-shadow: 0 16px 24px rgba(0,0,0,0.06);
     }
     .tech-card.hel { border-top: 6px solid var(--heliar); }
     .tech-card.mou { border-top: 6px solid var(--moura); }
@@ -227,37 +233,37 @@
       display: flex;
       align-items: center;
       gap: 0.8rem;
-      color: #3c4043;
+      color: #2c3e50;
     }
     .tech-card i.fa-check-circle {
       color: var(--primary);
     }
 
-    /* seção aprofundada de cada bateria */
+    /* seção aprofundada com fundo mais quente */
     .battery-deep {
       padding: 4rem 0;
-      background-color: var(--gray-bg);
+      background-color: #f5f7fa;
     }
     .battery-deep .section-title {
       font-size: 2rem;
       font-weight: 500;
       margin-bottom: 2.5rem;
-      color: #202124;
+      color: #1e2a3a;
       text-align: center;
     }
     .deep-grid {
       display: flex;
       flex-direction: column;
-      gap: 3rem;
+      gap: 2.5rem;
     }
     .deep-item {
       display: flex;
       flex-wrap: wrap;
-      background: white;
+      background: #ffffff;
       border-radius: 2.5rem;
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
-      border: 1px solid var(--border-light);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.04);
+      border: 1px solid #dee5ed;
     }
     .deep-info {
       flex: 2 1 400px;
@@ -271,15 +277,16 @@
     .deep-specs {
       display: flex;
       flex-wrap: wrap;
-      gap: 2rem;
+      gap: 1.5rem;
       margin: 2rem 0;
     }
     .spec {
-      background: var(--gray-bg);
+      background: #eef2f6;
       padding: 1rem 1.5rem;
       border-radius: 2rem;
       text-align: center;
       flex: 1 1 120px;
+      border: 1px solid #d7e0e8;
     }
     .spec .value {
       font-size: 2rem;
@@ -288,10 +295,10 @@
     }
     .spec .label {
       font-size: 0.9rem;
-      color: #5f6368;
+      color: #3a4a5c;
     }
     .deep-desc {
-      color: #3c4043;
+      color: #2c3e50;
       margin-bottom: 2rem;
     }
     .deep-cta {
@@ -302,10 +309,14 @@
       border-radius: 40px;
       text-decoration: none;
       font-weight: 500;
+      transition: 0.2s;
+    }
+    .deep-cta:hover {
+      background: var(--primary-dark);
     }
     .deep-image {
       flex: 1 1 300px;
-      background: linear-gradient(145deg, #f1f3f4, #ffffff);
+      background: linear-gradient(145deg, #eef2f6, #ffffff);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -314,12 +325,15 @@
     .deep-image img {
       width: 200px;
       height: auto;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.08));
     }
 
     /* ofertas */
     .offers {
       padding: 4rem 0;
-      background: white;
+      background: #e9eef3; /* tom mais suave */
+      border-top: 1px solid #d0d9e4;
+      border-bottom: 1px solid #d0d9e4;
     }
     .cards {
       display: flex;
@@ -328,12 +342,17 @@
       justify-content: center;
     }
     .card {
-      background: var(--gray-bg);
-      border-radius: 1.5rem;
+      background: #ffffff;
+      border-radius: 1.8rem;
       padding: 2rem 1.5rem;
       flex: 1 1 280px;
       max-width: 350px;
-      border: 1px solid var(--border-light);
+      border: 1px solid #d7e0e8;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.02);
+      transition: 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.06);
     }
     .card i {
       font-size: 2.5rem;
@@ -343,29 +362,46 @@
     .card h3 {
       font-size: 1.8rem;
       font-weight: 500;
+      color: #1e2a3a;
     }
 
     /* localização */
     .location {
       padding: 4rem 0;
-      background-color: var(--gray-bg);
+      background-color: #f0f4f9;
     }
     .map-container {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
-      background: white;
-      border-radius: 2rem;
+      background: #ffffff;
+      border-radius: 2.5rem;
       overflow: hidden;
-      border: 1px solid var(--border-light);
+      border: 1px solid #d7e0e8;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.02);
     }
     .map-info {
       flex: 1 1 300px;
       padding: 2rem;
     }
+    .map-info h3 {
+      color: #1e2a3a;
+      margin-bottom: 1.2rem;
+    }
+    .map-info p {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: #2c3e50;
+    }
+    .map-info i {
+      color: var(--primary);
+      width: 24px;
+    }
     .map-iframe {
       flex: 2 1 400px;
-      min-height: 300px;
+      min-height: 320px;
     }
     .map-iframe iframe {
       width: 100%;
@@ -375,11 +411,14 @@
 
     /* footer */
     footer {
-      background-color: white;
-      border-top: 1px solid var(--border-light);
-      padding: 2rem 0;
+      background-color: #1e2a3a; /* fundo escuro para contraste */
+      color: #cfddee;
+      padding: 2.5rem 0;
       text-align: center;
-      color: #5f6368;
+      border-top: 1px solid #2a3a4a;
+    }
+    footer p {
+      color: #a0b8cc;
     }
 
     /* floating wpp */
@@ -396,9 +435,10 @@
       align-items: center;
       justify-content: center;
       font-size: 2rem;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
       z-index: 999;
       text-decoration: none;
+      transition: 0.2s;
     }
     .floating-wpp:hover {
       background-color: #20b859;
@@ -414,11 +454,11 @@
         top: 70px;
         left: 0;
         width: 100%;
-        background: white;
+        background: #ffffff;
         flex-direction: column;
-        padding: 1rem 0;
+        padding: 1.5rem 0;
         display: none;
-        box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+        box-shadow: 0 12px 20px rgba(0,0,0,0.05);
         border-bottom: 1px solid var(--border-light);
       }
       .nav-menu.active {
@@ -447,7 +487,6 @@
     </div>
     <nav class="nav-menu" id="nav-menu">
       <ul class="nav-links">
-        <!-- Menu agora com os três nomes exatos, cada um com classe de cor -->
         <li><a href="#heliar" class="hel">Heliar</a></li>
         <li><a href="#moura" class="mou">Moura</a></li>
         <li><a href="#premium" class="pre">Premium</a></li>
@@ -472,7 +511,7 @@
         </div>
       </div>
       <div class="hero-image">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='90' fill='%231a73e8' opacity='0.1'/%3E%3Cpath d='M80 60 L140 90 L140 130 L80 160 L20 130 L20 90Z' fill='%231a73e8' opacity='0.8'/%3E%3Ctext x='45' y='120' fill='white' font-size='24' font-weight='bold' font-family='Roboto'%3Ebateria%3C/text%3E%3C/svg%3E" alt="">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='90' fill='%231a5fb4' opacity='0.1'/%3E%3Cpath d='M80 60 L140 90 L140 130 L80 160 L20 130 L20 90Z' fill='%231a5fb4' opacity='0.8'/%3E%3Ctext x='45' y='120' fill='white' font-size='24' font-weight='bold' font-family='Roboto'%3Ebateria%3C/text%3E%3C/svg%3E" alt="">
       </div>
     </div>
   </section>
@@ -482,7 +521,7 @@
     <div class="container">
       <div class="tech-grid">
         <div class="tech-card hel">
-          <h3><i class="fas fa-bolt" style="color:#d93025;"></i> Heliar</h3>
+          <h3><i class="fas fa-bolt" style="color:#c5221f;"></i> Heliar</h3>
           <ul>
             <li><i class="fas fa-check-circle"></i> 12V | 45Ah a 100Ah</li>
             <li><i class="fas fa-check-circle"></i> Corrente de partida: 370~850 CCA</li>
@@ -491,7 +530,7 @@
           </ul>
         </div>
         <div class="tech-card mou">
-          <h3><i class="fas fa-leaf" style="color:#188038;"></i> Moura</h3>
+          <h3><i class="fas fa-leaf" style="color:#0e6b2b;"></i> Moura</h3>
           <ul>
             <li><i class="fas fa-check-circle"></i> 12V | 50Ah a 120Ah</li>
             <li><i class="fas fa-check-circle"></i> Corrente de partida: 400~950 CCA</li>
@@ -500,7 +539,7 @@
           </ul>
         </div>
         <div class="tech-card pre">
-          <h3><i class="fas fa-crown" style="color:#b35e14;"></i> Premium</h3>
+          <h3><i class="fas fa-crown" style="color:#a86414;"></i> Premium</h3>
           <ul>
             <li><i class="fas fa-check-circle"></i> 12V | 70Ah a 150Ah</li>
             <li><i class="fas fa-check-circle"></i> Corrente de partida: 600~1050 CCA</li>
@@ -519,26 +558,26 @@
       <div class="deep-grid">
 
         <!-- HELIAR -->
-        <div class="deep-item" id="hel">
+        <div class="deep-item" id="heliar">
           <div class="deep-info">
-            <h3 style="color:#d93025;"><i class="fas fa-bolt"></i> Heliar</h3>
+            <h3 style="color:#c5221f;"><i class="fas fa-bolt"></i> Heliar</h3>
             <div class="deep-specs">
               <div class="spec"><span class="value">12V</span><span class="label">Voltagem</span></div>
               <div class="spec"><span class="value">60Ah</span><span class="label">Capacidade (média)</span></div>
               <div class="spec"><span class="value">580 CCA</span><span class="label">Partida a frio</span></div>
             </div>
-            <p class="deep-desc">As baterias Heliar utilizam tecnologia cálcio-cálcio, que reduz a perda de água e garante maior vida útil. Disponíveis nas capacidades de 45Ah até 100Ah (12V). Ideal para veigos populares e médios. As correntes de partida variam de 370 CCA a 850 CCA conforme o modelo. Baixa autodescarga e resistência a vibrações.</p>
+            <p class="deep-desc">As baterias Heliar utilizam tecnologia cálcio-cálcio, que reduz a perda de água e garante maior vida útil. Disponíveis nas capacidades de 45Ah até 100Ah (12V). Ideal para veículos populares e médios. As correntes de partida variam de 370 CCA a 850 CCA conforme o modelo. Baixa autodescarga e resistência a vibrações.</p>
             <a href="https://wa.me/5545999648025?text=Quero%20informações%20técnicas%20sobre%20Heliar" class="deep-cta" target="_blank">Consultar modelo exato</a>
           </div>
           <div class="deep-image">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 100 80'%3E%3Crect x='10' y='10' width='80' height='60' rx='8' fill='%23d93025' opacity='0.2'/%3E%3Crect x='20' y='20' width='60' height='40' rx='4' fill='%23d93025' /%3E%3Ctext x='30' y='45' fill='white' font-size='16' font-weight='bold'%3EHeliar%3C/text%3E%3C/svg%3E" alt="Heliar">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 100 80'%3E%3Crect x='10' y='10' width='80' height='60' rx='8' fill='%23c5221f' opacity='0.15'/%3E%3Crect x='20' y='20' width='60' height='40' rx='4' fill='%23c5221f' /%3E%3Ctext x='30' y='45' fill='white' font-size='16' font-weight='bold'%3EHeliar%3C/text%3E%3C/svg%3E" alt="Heliar">
           </div>
         </div>
 
         <!-- MOURA -->
         <div class="deep-item" id="moura">
           <div class="deep-info">
-            <h3 style="color:#188038;"><i class="fas fa-leaf"></i> Moura</h3>
+            <h3 style="color:#0e6b2b;"><i class="fas fa-leaf"></i> Moura</h3>
             <div class="deep-specs">
               <div class="spec"><span class="value">12V</span><span class="label">Voltagem</span></div>
               <div class="spec"><span class="value">70Ah</span><span class="label">Capacidade (média)</span></div>
@@ -548,14 +587,14 @@
             <a href="https://wa.me/5545999648025?text=Quero%20informações%20técnicas%20sobre%20Moura" class="deep-cta" target="_blank">Saber mais</a>
           </div>
           <div class="deep-image">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 100 80'%3E%3Crect x='10' y='10' width='80' height='60' rx='8' fill='%23188038' opacity='0.2'/%3E%3Crect x='20' y='20' width='60' height='40' rx='4' fill='%23188038' /%3E%3Ctext x='25' y='45' fill='white' font-size='16' font-weight='bold'%3EMoura%3C/text%3E%3C/svg%3E" alt="Moura">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 100 80'%3E%3Crect x='10' y='10' width='80' height='60' rx='8' fill='%230e6b2b' opacity='0.15'/%3E%3Crect x='20' y='20' width='60' height='40' rx='4' fill='%230e6b2b' /%3E%3Ctext x='25' y='45' fill='white' font-size='16' font-weight='bold'%3EMoura%3C/text%3E%3C/svg%3E" alt="Moura">
           </div>
         </div>
 
         <!-- PREMIUM -->
         <div class="deep-item" id="premium">
           <div class="deep-info">
-            <h3 style="color:#b35e14;"><i class="fas fa-crown"></i> Premium (Start-Stop)</h3>
+            <h3 style="color:#a86414;"><i class="fas fa-crown"></i> Premium (Start-Stop)</h3>
             <div class="deep-specs">
               <div class="spec"><span class="value">12V</span><span class="label">Voltagem</span></div>
               <div class="spec"><span class="value">80Ah</span><span class="label">Capacidade (média)</span></div>
@@ -565,7 +604,7 @@
             <a href="https://wa.me/5545999648025?text=Quero%20informações%20técnicas%20sobre%20a%20linha%20Premium" class="deep-cta" target="_blank">Consultar disponibilidade</a>
           </div>
           <div class="deep-image">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 100 80'%3E%3Crect x='10' y='10' width='80' height='60' rx='8' fill='%23b35e14' opacity='0.2'/%3E%3Crect x='20' y='20' width='60' height='40' rx='4' fill='%23b35e14' /%3E%3Ctext x='20' y='45' fill='white' font-size='14' font-weight='bold'%3EPREMIUM%3C/text%3E%3C/svg%3E" alt="Premium">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 100 80'%3E%3Crect x='10' y='10' width='80' height='60' rx='8' fill='%23a86414' opacity='0.15'/%3E%3Crect x='20' y='20' width='60' height='40' rx='4' fill='%23a86414' /%3E%3Ctext x='20' y='45' fill='white' font-size='14' font-weight='bold'%3EPREMIUM%3C/text%3E%3C/svg%3E" alt="Premium">
           </div>
         </div>
       </div>
