@@ -187,6 +187,7 @@
     .hero-image img {
       max-width: 100%;
       width: 380px;
+      height: auto;
       filter: drop-shadow(0 6px 10px rgba(0,0,0,0.1));
     }
 
@@ -521,9 +522,12 @@
         </div>
       </div>
       <div class="hero-image">
-        <!-- INSTRUÇÃO: substitua src pelo caminho da sua imagem real -->
-        <img src="caminho/para/sua-imagem-principal.svg" alt="Bateria automotiva">
-        <!-- LINHA ACIMA: é onde você coloca o caminho da imagem -->
+        <!-- IMAGEM DO HERO COM VERSÕES RESPONSIVAS -->
+        <img src="imagens/hero-oficina.jpg"
+             srcset="imagens/hero-oficina-mobile.jpg 400w,
+                     imagens/hero-oficina.jpg 800w"
+             sizes="(max-width: 768px) 400px, 800px"
+             alt="Bateria automotiva">
       </div>
     </div>
   </section>
@@ -584,9 +588,12 @@
             <a href="https://wa.me/5545999648025?text=Olá!%20Tenho%20dúvidas%20sobre%20a%20bateria%20Heliar" class="btn-deep hel" target="_blank"><i class="fas fa-question-circle"></i> Dúvidas</a>
           </div>
           <div class="deep-image">
-            <!-- INSTRUÇÃO: substitua src pelo caminho da imagem da Heliar -->
-            <img src="caminho/para/imagem-heliar.png" alt="Bateria Heliar">
-            <!-- LINHA ACIMA: coloque o caminho da imagem Heliar -->
+            <!-- IMAGEM HELIAR COM VERSÕES RESPONSIVAS -->
+            <img src="imagens/heliar-desktop.jpg"
+                 srcset="imagens/heliar-mobile.jpg 400w,
+                         imagens/heliar-desktop.jpg 800w"
+                 sizes="(max-width: 768px) 400px, 800px"
+                 alt="Bateria Heliar">
           </div>
         </div>
 
@@ -605,9 +612,12 @@
             <a href="https://wa.me/5545999648025?text=Olá!%20Tenho%20dúvidas%20sobre%20a%20bateria%20Moura" class="btn-deep mou" target="_blank"><i class="fas fa-question-circle"></i> Dúvidas</a>
           </div>
           <div class="deep-image">
-            <!-- INSTRUÇÃO: substitua src pelo caminho da imagem da Moura -->
-            <img src="caminho/para/imagem-moura.png" alt="Bateria Moura">
-            <!-- LINHA ACIMA: coloque o caminho da imagem Moura -->
+            <!-- IMAGEM MOURA COM VERSÕES RESPONSIVAS -->
+            <img src="imagens/moura-desktop.jpg"
+                 srcset="imagens/moura-mobile.jpg 400w,
+                         imagens/moura-desktop.jpg 800w"
+                 sizes="(max-width: 768px) 400px, 800px"
+                 alt="Bateria Moura">
           </div>
         </div>
 
@@ -626,9 +636,12 @@
             <a href="https://wa.me/5545999648025?text=Olá!%20Tenho%20dúvidas%20sobre%20a%20bateria%20Premium" class="btn-deep pre" target="_blank"><i class="fas fa-question-circle"></i> Dúvidas</a>
           </div>
           <div class="deep-image">
-            <!-- INSTRUÇÃO: substitua src pelo caminho da imagem da Premium -->
-            <img src="caminho/para/imagem-premium.png" alt="Bateria Premium">
-            <!-- LINHA ACIMA: coloque o caminho da imagem Premium -->
+            <!-- IMAGEM PREMIUM COM VERSÕES RESPONSIVAS -->
+            <img src="imagens/premium-desktop.jpg"
+                 srcset="imagens/premium-mobile.jpg 400w,
+                         imagens/premium-desktop.jpg 800w"
+                 sizes="(max-width: 768px) 400px, 800px"
+                 alt="Bateria Premium">
           </div>
         </div>
       </div>
@@ -701,12 +714,5 @@
   });
 </script>
 
-<!-- INSTRUÇÕES GLOBAIS PARA IMAGENS:
-  - hero image: <img src="caminho/para/sua-imagem-principal.svg">
-  - imagem Heliar: <img src="caminho/para/imagem-heliar.png">
-  - imagem Moura: <img src="caminho/para/imagem-moura.png">
-  - imagem Premium: <img src="caminho/para/imagem-premium.png">
-  Substitua "caminho/para/" pelo diretório real onde suas imagens estão armazenadas.
--->
 </body>
 </html>
