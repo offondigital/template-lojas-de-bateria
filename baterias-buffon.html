@@ -1,5 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+<!-- BARRA DE SOCORRO FIXA - VERSÃO DISCRETA -->
+<div style="background-color: #c5221f; padding: 4px 0; text-align: center; border-bottom: 1px solid #ffaa00; position: fixed; top: 0; left: 0; width: 100%; z-index: 9999; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+  <div class="container" style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;">
+    <span style="color: white; font-weight: 500; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
+      <i class="fas fa-exclamation-triangle" style="margin-right: 5px; color: #ffaa00; font-size: 0.8rem;"></i> 
+      BATERIA DESCARREGOU?
+    </span>
+    
+    <!-- BOTÃO PISCANDO SUAVE -->
+    <a href="https://wa.me/5545999648025?text=Olá!%20Preciso%20de%20SOCORRO%20URGENTE!%20Meu%20carro%20está%20parado%20sem%20bateria.%20Por%20favor%2C%20me%20ajudem!" 
+       target="_blank"
+       style="background-color: #ffaa00; 
+              color: #1a1a1a; 
+              padding: 5px 15px; 
+              border-radius: 30px; 
+              text-decoration: none; 
+              font-weight: 600; 
+              font-size: 0.85rem;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+              border: 1px solid white;
+              box-shadow: 0 0 0 0 rgba(255, 170, 0, 0.5);
+              animation: piscar-suave 1.8s infinite;
+              display: inline-flex;
+              align-items: center;
+              gap: 6px;
+              transition: all 0.2s;">
+      <i class="fab fa-whatsapp" style="font-size: 1rem;"></i> 
+      SOCORRO 24H
+    </a>
+  </div>
+</div>
+
+<!-- ESPAÇO COMPENSATÓRIO (MENOR) -->
+<div style="height: 45px;"></div>
+
+<!-- ESTILO DA ANIMAÇÃO SUAVE -->
+<style>
+  @keyframes piscar-suave {
+    0% { background-color: #ffaa00; box-shadow: 0 0 0 0 rgba(255, 170, 0, 0.4); }
+    50% { background-color: #ffbb22; box-shadow: 0 0 10px 3px rgba(255, 170, 0, 0.4); }
+    100% { background-color: #ffaa00; box-shadow: 0 0 0 0 rgba(255, 170, 0, 0.4); }
+  }
+  
+  /* Ajuste para o header */
+  header {
+    margin-top: 0 !important;
+  }
+</style>  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
