@@ -131,7 +131,7 @@
       border-radius: 3px;
       transition: 0.2s;
     }
-    /* hero - NOVO TÍTULO */
+    /* hero */
     .hero {
       background: linear-gradient(135deg, #e9eef3 0%, #dae1e9 100%);
       padding: 4rem 0;
@@ -240,7 +240,7 @@
       color: var(--primary);
     }
 
-    /* seção aprofundada com botões específicos */
+    /* ===== SEÇÃO PRINCIPAL DAS BATERIAS - IMAGENS ABAIXO DO NOME ===== */
     .battery-deep {
       padding: 4rem 0;
       background-color: #f5f7fa;
@@ -252,96 +252,143 @@
       color: #1e2a3a;
       text-align: center;
     }
+    
+    /* GRADE 3x1 */
     .deep-grid {
       display: flex;
       flex-direction: column;
-      gap: 2.5rem;
+      gap: 2rem;
     }
+    
+    /* Cada bloco de bateria - layout vertical com imagem abaixo do nome */
     .deep-item {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       background: #ffffff;
-      border-radius: 2.5rem;
+      border-radius: 2rem;
       overflow: hidden;
       box-shadow: 0 12px 28px rgba(0,0,0,0.04);
       border: 1px solid #dee5ed;
+      padding: 2rem;
     }
-    .deep-info {
-      flex: 2 1 400px;
-      padding: 2.5rem;
+    
+    /* Cabeçalho com nome */
+    .deep-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
     }
-    .deep-info h3 {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
+    
+    .deep-header h3 {
+      font-size: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
     }
-    .deep-info h3 i { margin-right: 0.8rem; }
+    
+    .deep-header h3 i { 
+      font-size: 2.3rem;
+    }
+    
+    /* Container da imagem */
+    .deep-image-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .deep-image-container img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.08));
+      transition: transform 0.3s;
+    }
+    
+    .deep-image-container img:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Conteúdo (especificações + descrição + botões) */
+    .deep-content {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Especificações em linha */
     .deep-specs {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
-      margin: 2rem 0;
+      gap: 1rem;
+      margin: 1rem 0 1.5rem 0;
+      justify-content: center;
     }
+    
     .spec {
       background: #eef2f6;
-      padding: 1rem 1.5rem;
+      padding: 0.8rem 1.2rem;
       border-radius: 2rem;
       text-align: center;
-      flex: 1 1 120px;
+      flex: 1 1 100px;
       border: 1px solid #d7e0e8;
     }
+    
     .spec .value {
-      font-size: 2rem;
+      font-size: 1.6rem;
       font-weight: 700;
       color: var(--primary);
+      display: block;
     }
+    
     .spec .label {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       color: #3a4a5c;
     }
+    
     .deep-desc {
       color: #2c3e50;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+      text-align: center;
     }
-    /* ---- BOTÕES ESPECÍFICOS POR BATERIA (CTA) ---- */
+    
+    /* Container dos botões */
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      justify-content: center;
+    }
+    
     .btn-deep {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       background: var(--primary);
       color: white;
-      padding: 0.9rem 2.2rem;
+      padding: 0.7rem 1.5rem;
       border-radius: 40px;
       text-decoration: none;
       font-weight: 500;
       transition: 0.2s;
       border: none;
-      font-size: 1.1rem;
-      margin-right: 1rem;
-      margin-bottom: 0.5rem;
+      font-size: 1rem;
     }
-    .btn-deep:hover {
-      background: var(--primary-dark);
-      transform: scale(1.02);
-    }
-    .btn-deep.hel { background: #c5221f; }
-    .btn-deep.hel:hover { background: #a01d1a; }
-    .btn-deep.mou { background: #0e6b2b; }
-    .btn-deep.mou:hover { background: #0a521f; }
-    .btn-deep.pre { background: #a86414; }
-    .btn-deep.pre:hover { background: #864e0f; }
     
-    .deep-image {
-      flex: 1 1 300px;
-      background: linear-gradient(145deg, #eef2f6, #ffffff);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
+    .btn-deep:hover {
+      transform: scale(1.02);
+      filter: brightness(1.1);
     }
-    .deep-image img {
-      width: 200px;
-      height: auto;
-      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.08));
-    }
-
+    
+    .btn-deep.hel { background: #c5221f; }
+    .btn-deep.mou { background: #0e6b2b; }
+    .btn-deep.pre { background: #a86414; }
+    
+    /* Cores dos títulos */
+    .hel-color { color: #c5221f; }
+    .mou-color { color: #0e6b2b; }
+    .pre-color { color: #a86414; }
+    
     /* ofertas */
     .offers {
       padding: 4rem 0;
@@ -482,6 +529,10 @@
       .hero-text h2 {
         font-size: 2rem;
       }
+      
+      .deep-header h3 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
@@ -509,25 +560,24 @@
 </header>
 
 <main>
-  <!-- Hero com NOVO TÍTULO focado no carro -->
+  <!-- Hero -->
   <section class="hero" id="inicio">
     <div class="container">
       <div class="hero-text">
-        <!-- NOVO TÍTULO: mais conversa com o carro do cliente -->
         <h2>Seu carro merece a partida mais forte</h2>
         <p>Heliar, Moura e Premium com especificações completas. Troca rápida em Cascavel.</p>
         <div class="hero-cta">
           <a href="https://wa.me/5545999648025?text=Olá!%20Quero%20comprar%20uma%20bateria" class="btn btn-primary" target="_blank"><i class="fab fa-whatsapp"></i> Peça agora</a>
-          <a href="#heliar" class="btn btn-outline">Conheça as marcas</a>
+          <a href="#heliar" class="btn">Conheça as marcas</a>
         </div>
       </div>
       <div class="hero-image">
-        <!-- IMAGEM DO HERO COM VERSÕES RESPONSIVAS -->
-        <img src="imagens/hero-oficina.jpg"
-             srcset="imagens/hero-oficina-mobile.jpg 400w,
-                     imagens/hero-oficina.jpg 800w"
+        <!-- IMAGEM DO HERO -->
+        <img src="https://placehold.co/800x600/1a5fb4/white?text=Baterias+Buffon"
+             srcset="https://placehold.co/400x300/1a5fb4/white?text=Buffon 400w,
+                     https://placehold.co/800x600/1a5fb4/white?text=Baterias+Buffon 800w"
              sizes="(max-width: 768px) 400px, 800px"
-             alt="Bateria automotiva">
+             alt="Baterias Buffon">
       </div>
     </div>
   </section>
@@ -537,7 +587,7 @@
     <div class="container">
       <div class="tech-grid">
         <div class="tech-card hel">
-          <h3><i class="fas fa-bolt" style="color:#c5221f;"></i> Heliar</h3>
+          <h3><i class="fas fa-bolt"></i> Heliar</h3>
           <ul>
             <li><i class="fas fa-check-circle"></i> 12V | 45Ah a 100Ah</li>
             <li><i class="fas fa-check-circle"></i> Corrente de partida: 370~850 CCA</li>
@@ -546,7 +596,7 @@
           </ul>
         </div>
         <div class="tech-card mou">
-          <h3><i class="fas fa-leaf" style="color:#0e6b2b;"></i> Moura</h3>
+          <h3><i class="fas fa-leaf"></i> Moura</h3>
           <ul>
             <li><i class="fas fa-check-circle"></i> 12V | 50Ah a 120Ah</li>
             <li><i class="fas fa-check-circle"></i> Corrente de partida: 400~950 CCA</li>
@@ -555,7 +605,7 @@
           </ul>
         </div>
         <div class="tech-card pre">
-          <h3><i class="fas fa-crown" style="color:#a86414;"></i> Premium</h3>
+          <h3><i class="fas fa-crown"></i> Premium</h3>
           <ul>
             <li><i class="fas fa-check-circle"></i> 12V | 70Ah a 150Ah</li>
             <li><i class="fas fa-check-circle"></i> Corrente de partida: 600~1050 CCA</li>
@@ -567,7 +617,7 @@
     </div>
   </section>
 
-  <!-- Seção aprofundada com CTA exclusivos por bateria -->
+  <!-- SEÇÃO DAS BATERIAS - IMAGENS ABAIXO DO NOME -->
   <section class="battery-deep">
     <div class="container">
       <h2 class="section-title">Informações técnicas completas</h2>
@@ -575,80 +625,152 @@
 
         <!-- HELIAR -->
         <div class="deep-item" id="heliar">
-          <div class="deep-info">
-            <h3 style="color:#c5221f;"><i class="fas fa-bolt"></i> Heliar</h3>
-            <div class="deep-specs">
-              <div class="spec"><span class="value">12V</span><span class="label">Voltagem</span></div>
-              <div class="spec"><span class="value">60Ah</span><span class="label">Capacidade (média)</span></div>
-              <div class="spec"><span class="value">580 CCA</span><span class="label">Partida a frio</span></div>
-            </div>
-            <p class="deep-desc">As baterias Heliar utilizam tecnologia cálcio-cálcio, que reduz a perda de água e garante maior vida útil. Disponíveis nas capacidades de 45Ah até 100Ah (12V). Ideal para veículos populares e médios. As correntes de partida variam de 370 CCA a 850 CCA conforme o modelo. Baixa autodescarga e resistência a vibrações.</p>
-            <!-- CTA específico Heliar -->
-            <a href="https://wa.me/5545999648025?text=Olá!%20Quero%20comprar%20uma%20bateria%20Heliar%20específica%20para%20meu%20carro" class="btn-deep hel" target="_blank"><i class="fab fa-whatsapp"></i> Comprar Heliar</a>
-            <a href="https://wa.me/5545999648025?text=Olá!%20Tenho%20dúvidas%20sobre%20a%20bateria%20Heliar" class="btn-deep hel" target="_blank"><i class="fas fa-question-circle"></i> Dúvidas</a>
+          <div class="deep-header">
+            <h3 class="hel-color">
+              <i class="fas fa-bolt"></i> Heliar
+            </h3>
           </div>
-          <div class="deep-image">
-            <!-- IMAGEM HELIAR COM VERSÕES RESPONSIVAS -->
-            <img src="imagens/heliar-desktop.jpg"
-                 srcset="imagens/heliar-mobile.jpg 400w,
-                         imagens/heliar-desktop.jpg 800w"
-                 sizes="(max-width: 768px) 400px, 800px"
+          
+          <div class="deep-image-container">
+            <img src="https://placehold.co/400x400/c5221f/white?text=Heliar"
+                 srcset="https://placehold.co/200x200/c5221f/white?text=Heliar 200w,
+                         https://placehold.co/400x400/c5221f/white?text=Heliar 400w"
+                 sizes="(max-width: 768px) 200px, 400px"
                  alt="Bateria Heliar">
+          </div>
+          
+          <div class="deep-content">
+            <div class="deep-specs">
+              <div class="spec">
+                <span class="value">12V</span>
+                <span class="label">Voltagem</span>
+              </div>
+              <div class="spec">
+                <span class="value">60Ah</span>
+                <span class="label">Média</span>
+              </div>
+              <div class="spec">
+                <span class="value">580 CCA</span>
+                <span class="label">Partida</span>
+              </div>
+            </div>
+            
+            <p class="deep-desc">
+              Tecnologia cálcio-cálcio que reduz perda de água. Disponível de 45Ah a 100Ah. 
+              Alta resistência a vibrações e baixa autodescarga.
+            </p>
+            
+            <div class="button-group">
+              <a href="https://wa.me/5545999648025?text=Quero%20comprar%20Heliar" class="btn-deep hel" target="_blank">
+                <i class="fab fa-whatsapp"></i> Comprar
+              </a>
+              <a href="https://wa.me/5545999648025?text=Dúvidas%20sobre%20Heliar" class="btn-deep hel" target="_blank">
+                <i class="fas fa-question-circle"></i> Dúvidas
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- MOURA -->
         <div class="deep-item" id="moura">
-          <div class="deep-info">
-            <h3 style="color:#0e6b2b;"><i class="fas fa-leaf"></i> Moura</h3>
-            <div class="deep-specs">
-              <div class="spec"><span class="value">12V</span><span class="label">Voltagem</span></div>
-              <div class="spec"><span class="value">70Ah</span><span class="label">Capacidade (média)</span></div>
-              <div class="spec"><span class="value">680 CCA</span><span class="label">Partida a frio</span></div>
-            </div>
-            <p class="deep-desc">Tecnologia Moura Clean com liga chumbo-cálcio-estanho, oferecendo alta performance e durabilidade. Linha automotiva de 50Ah a 120Ah, com corrente de partida de 400 a 950 CCA. As baterias Moura possuem dupla vedação e tampas labirinto que previnem vazamentos. Indicadas para veículos nacionais e importados.</p>
-            <!-- CTA específico Moura -->
-            <a href="https://wa.me/5545999648025?text=Olá!%20Quero%20comprar%20uma%20bateria%20Moura%20para%20meu%20carro" class="btn-deep mou" target="_blank"><i class="fab fa-whatsapp"></i> Comprar Moura</a>
-            <a href="https://wa.me/5545999648025?text=Olá!%20Tenho%20dúvidas%20sobre%20a%20bateria%20Moura" class="btn-deep mou" target="_blank"><i class="fas fa-question-circle"></i> Dúvidas</a>
+          <div class="deep-header">
+            <h3 class="mou-color">
+              <i class="fas fa-leaf"></i> Moura
+            </h3>
           </div>
-          <div class="deep-image">
-            <!-- IMAGEM MOURA COM VERSÕES RESPONSIVAS -->
-            <img src="imagens/moura-desktop.jpg"
-                 srcset="imagens/moura-mobile.jpg 400w,
-                         imagens/moura-desktop.jpg 800w"
-                 sizes="(max-width: 768px) 400px, 800px"
+          
+          <div class="deep-image-container">
+            <img src="https://placehold.co/400x400/0e6b2b/white?text=Moura"
+                 srcset="https://placehold.co/200x200/0e6b2b/white?text=Moura 200w,
+                         https://placehold.co/400x400/0e6b2b/white?text=Moura 400w"
+                 sizes="(max-width: 768px) 200px, 400px"
                  alt="Bateria Moura">
+          </div>
+          
+          <div class="deep-content">
+            <div class="deep-specs">
+              <div class="spec">
+                <span class="value">12V</span>
+                <span class="label">Voltagem</span>
+              </div>
+              <div class="spec">
+                <span class="value">70Ah</span>
+                <span class="label">Média</span>
+              </div>
+              <div class="spec">
+                <span class="value">680 CCA</span>
+                <span class="label">Partida</span>
+              </div>
+            </div>
+            
+            <p class="deep-desc">
+              Tecnologia Moura Clean com dupla vedação. Linha de 50Ah a 120Ah. 
+              Alta durabilidade e performance para veículos nacionais e importados.
+            </p>
+            
+            <div class="button-group">
+              <a href="https://wa.me/5545999648025?text=Quero%20comprar%20Moura" class="btn-deep mou" target="_blank">
+                <i class="fab fa-whatsapp"></i> Comprar
+              </a>
+              <a href="https://wa.me/5545999648025?text=Dúvidas%20sobre%20Moura" class="btn-deep mou" target="_blank">
+                <i class="fas fa-question-circle"></i> Dúvidas
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- PREMIUM -->
         <div class="deep-item" id="premium">
-          <div class="deep-info">
-            <h3 style="color:#a86414;"><i class="fas fa-crown"></i> Premium (Start-Stop)</h3>
-            <div class="deep-specs">
-              <div class="spec"><span class="value">12V</span><span class="label">Voltagem</span></div>
-              <div class="spec"><span class="value">80Ah</span><span class="label">Capacidade (média)</span></div>
-              <div class="spec"><span class="value">800 CCA</span><span class="label">Partida a frio</span></div>
-            </div>
-            <p class="deep-desc">Linha Premium com tecnologia EFB (Enhanced Flooded Battery) e AGM (Absorbent Glass Mat) para veículos com sistema Start-Stop. Capacidade de 70Ah a 150Ah e altíssima corrente de partida (até 1050 CCA). Suporta ciclos profundos e recarga rápida. Ideal para carros de luxo, SUVs e híbridos leves.</p>
-            <!-- CTA específico Premium -->
-            <a href="https://wa.me/5545999648025?text=Olá!%20Quero%20comprar%20uma%20bateria%20Premium%20para%20meu%20carro" class="btn-deep pre" target="_blank"><i class="fab fa-whatsapp"></i> Comprar Premium</a>
-            <a href="https://wa.me/5545999648025?text=Olá!%20Tenho%20dúvidas%20sobre%20a%20bateria%20Premium" class="btn-deep pre" target="_blank"><i class="fas fa-question-circle"></i> Dúvidas</a>
+          <div class="deep-header">
+            <h3 class="pre-color">
+              <i class="fas fa-crown"></i> Premium
+            </h3>
           </div>
-          <div class="deep-image">
-            <!-- IMAGEM PREMIUM COM VERSÕES RESPONSIVAS -->
-            <img src="imagens/premium-desktop.jpg"
-                 srcset="imagens/premium-mobile.jpg 400w,
-                         imagens/premium-desktop.jpg 800w"
-                 sizes="(max-width: 768px) 400px, 800px"
+          
+          <div class="deep-image-container">
+            <img src="https://placehold.co/400x400/a86414/white?text=Premium"
+                 srcset="https://placehold.co/200x200/a86414/white?text=Premium 200w,
+                         https://placehold.co/400x400/a86414/white?text=Premium 400w"
+                 sizes="(max-width: 768px) 200px, 400px"
                  alt="Bateria Premium">
+          </div>
+          
+          <div class="deep-content">
+            <div class="deep-specs">
+              <div class="spec">
+                <span class="value">12V</span>
+                <span class="label">Voltagem</span>
+              </div>
+              <div class="spec">
+                <span class="value">80Ah</span>
+                <span class="label">Média</span>
+              </div>
+              <div class="spec">
+                <span class="value">800 CCA</span>
+                <span class="label">Partida</span>
+              </div>
+            </div>
+            
+            <p class="deep-desc">
+              Tecnologia EFB/AGM para Start-Stop. Até 150Ah e 1050 CCA. 
+              Ideal para carros de luxo, SUVs e veículos com alta exigência.
+            </p>
+            
+            <div class="button-group">
+              <a href="https://wa.me/5545999648025?text=Quero%20comprar%20Premium" class="btn-deep pre" target="_blank">
+                <i class="fab fa-whatsapp"></i> Comprar
+              </a>
+              <a href="https://wa.me/5545999648025?text=Dúvidas%20sobre%20Premium" class="btn-deep pre" target="_blank">
+                <i class="fas fa-question-circle"></i> Dúvidas
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Ofertas com marketing -->
+  <!-- Ofertas -->
   <section class="offers" id="ofertas">
     <div class="container">
       <h2 class="section-title">Ofertas imperdíveis</h2>
@@ -672,7 +794,7 @@
     </div>
   </section>
 
-  <!-- Mapa e endereço -->
+  <!-- Localização -->
   <section class="location" id="local">
     <div class="container">
       <h2 class="section-title">Onde estamos</h2>
@@ -682,7 +804,9 @@
           <p><i class="fas fa-map-pin"></i> Rua Guatemala, 1090 - Periolo, Cascavel - PR</p>
           <p><i class="fas fa-clock"></i> Seg-sex 8h-18h | Sáb 8h-12h</p>
           <p><i class="fas fa-phone-alt"></i> (45) 99964-8025 (WhatsApp)</p>
-          <a href="https://wa.me/5545999648025?text=Olá!%20Vi%20o%20site%20e%20quero%20saber%20mais" class="btn btn-primary" target="_blank"><i class="fab fa-whatsapp"></i> Chamar no WhatsApp</a>
+          <a href="https://wa.me/5545999648025?text=Olá!%20Vi%20o%20site" class="btn btn-primary" target="_blank">
+            <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+          </a>
         </div>
         <div class="map-iframe">
           <iframe src="https://www.google.com/maps?q=Rua%20Guatemala,%201090%20Periolo%20Cascavel%20PR&output=embed" allowfullscreen loading="lazy"></iframe>
@@ -699,17 +823,23 @@
   </div>
 </footer>
 
-<a href="https://wa.me/5545999648025?text=Olá!%20Preciso%20de%20informações%20técnicas%20sobre%20baterias" class="floating-wpp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/5545999648025?text=Olá!%20Preciso%20de%20informações" class="floating-wpp" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 <script>
   const mobileMenu = document.getElementById('mobile-menu');
   const navMenu = document.getElementById('nav-menu');
+  
   mobileMenu.addEventListener('click', () => {
     navMenu.classList.toggle('active');
   });
+  
   document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', (e) => {
-      if (window.innerWidth <= 768) navMenu.classList.remove('active');
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        navMenu.classList.remove('active');
+      }
     });
   });
 </script>
