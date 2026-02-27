@@ -10,7 +10,7 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bateriasbuffon.com.br">
-  <meta property="og:title" content="Baterias Buffon - Energia com informação técnica">
+  <meta property="og:title" content="Baterias Buffon - A bateria certa para seu carro">
   <!-- Fonte Roboto (Google) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,21 +25,21 @@
     }
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #f5f7fa; /* fundo mais suave que branco puro */
-      color: #1e2a3a; /* tom mais escuro para contraste suave */
+      background-color: #f5f7fa;
+      color: #1e2a3a;
       line-height: 1.6;
       scroll-behavior: smooth;
     }
     :root {
-      --primary: #1a5fb4; /* azul mais suave que o anterior */
+      --primary: #1a5fb4;
       --primary-dark: #0f3d7a;
       --cta-green: #25D366;
-      --gray-bg: #eef2f6; /* fundo de seções mais quente */
+      --gray-bg: #eef2f6;
       --border-light: #d0d9e4;
-      --heliar: #c5221f; /* vermelho mais equilibrado */
+      --heliar: #c5221f;
       --moura: #0e6b2b;
       --premium: #a86414;
-      --card-bg: #ffffff; /* cards ainda brancos mas com sombra */
+      --card-bg: #ffffff;
       --text-dark: #1e2a3a;
       --text-soft: #2c3e50;
     }
@@ -131,7 +131,7 @@
       border-radius: 3px;
       transition: 0.2s;
     }
-    /* hero */
+    /* hero - NOVO TÍTULO */
     .hero {
       background: linear-gradient(135deg, #e9eef3 0%, #dae1e9 100%);
       padding: 4rem 0;
@@ -190,10 +190,10 @@
       filter: drop-shadow(0 6px 10px rgba(0,0,0,0.1));
     }
 
-    /* tech summary cards com fundo */
+    /* tech summary cards */
     .tech-summary {
       padding: 3rem 0;
-      background-color: #f0f4f9; /* leve tom */
+      background-color: #f0f4f9;
     }
     .tech-grid {
       display: flex;
@@ -239,7 +239,7 @@
       color: var(--primary);
     }
 
-    /* seção aprofundada com fundo mais quente */
+    /* seção aprofundada com botões específicos */
     .battery-deep {
       padding: 4rem 0;
       background-color: #f5f7fa;
@@ -301,19 +301,32 @@
       color: #2c3e50;
       margin-bottom: 2rem;
     }
-    .deep-cta {
+    /* ---- BOTÕES ESPECÍFICOS POR BATERIA (CTA) ---- */
+    .btn-deep {
       display: inline-block;
       background: var(--primary);
       color: white;
-      padding: 0.8rem 2rem;
+      padding: 0.9rem 2.2rem;
       border-radius: 40px;
       text-decoration: none;
       font-weight: 500;
       transition: 0.2s;
+      border: none;
+      font-size: 1.1rem;
+      margin-right: 1rem;
+      margin-bottom: 0.5rem;
     }
-    .deep-cta:hover {
+    .btn-deep:hover {
       background: var(--primary-dark);
+      transform: scale(1.02);
     }
+    .btn-deep.hel { background: #c5221f; }
+    .btn-deep.hel:hover { background: #a01d1a; }
+    .btn-deep.mou { background: #0e6b2b; }
+    .btn-deep.mou:hover { background: #0a521f; }
+    .btn-deep.pre { background: #a86414; }
+    .btn-deep.pre:hover { background: #864e0f; }
+    
     .deep-image {
       flex: 1 1 300px;
       background: linear-gradient(145deg, #eef2f6, #ffffff);
@@ -331,7 +344,7 @@
     /* ofertas */
     .offers {
       padding: 4rem 0;
-      background: #e9eef3; /* tom mais suave */
+      background: #e9eef3;
       border-top: 1px solid #d0d9e4;
       border-bottom: 1px solid #d0d9e4;
     }
@@ -349,10 +362,6 @@
       max-width: 350px;
       border: 1px solid #d7e0e8;
       box-shadow: 0 8px 16px rgba(0,0,0,0.02);
-      transition: 0.2s;
-    }
-    .card:hover {
-      box-shadow: 0 14px 28px rgba(0,0,0,0.06);
     }
     .card i {
       font-size: 2.5rem;
@@ -411,7 +420,7 @@
 
     /* footer */
     footer {
-      background-color: #1e2a3a; /* fundo escuro para contraste */
+      background-color: #1e2a3a;
       color: #cfddee;
       padding: 2.5rem 0;
       text-align: center;
@@ -499,11 +508,12 @@
 </header>
 
 <main>
-  <!-- Hero -->
+  <!-- Hero com NOVO TÍTULO focado no carro -->
   <section class="hero" id="inicio">
     <div class="container">
       <div class="hero-text">
-        <h2>Energia que move seu dia</h2>
+        <!-- NOVO TÍTULO: mais conversa com o carro do cliente -->
+        <h2>Seu carro merece a partida mais forte</h2>
         <p>Heliar, Moura e Premium com especificações completas. Troca rápida em Cascavel.</p>
         <div class="hero-cta">
           <a href="https://wa.me/5545999648025?text=Olá!%20Quero%20comprar%20uma%20bateria" class="btn btn-primary" target="_blank"><i class="fab fa-whatsapp"></i> Peça agora</a>
@@ -511,7 +521,9 @@
         </div>
       </div>
       <div class="hero-image">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='90' fill='%231a5fb4' opacity='0.1'/%3E%3Cpath d='M80 60 L140 90 L140 130 L80 160 L20 130 L20 90Z' fill='%231a5fb4' opacity='0.8'/%3E%3Ctext x='45' y='120' fill='white' font-size='24' font-weight='bold' font-family='Roboto'%3Ebateria%3C/text%3E%3C/svg%3E" alt="">
+        <!-- INSTRUÇÃO: substitua src pelo caminho da sua imagem real -->
+        <img src="caminho/para/sua-imagem-principal.svg" alt="Bateria automotiva">
+        <!-- LINHA ACIMA: é onde você coloca o caminho da imagem -->
       </div>
     </div>
   </section>
@@ -551,7 +563,7 @@
     </div>
   </section>
 
-  <!-- Seção aprofundada: Heliar, Moura, Premium com specs completas -->
+  <!-- Seção aprofundada com CTA exclusivos por bateria -->
   <section class="battery-deep">
     <div class="container">
       <h2 class="section-title">Informações técnicas completas</h2>
@@ -567,10 +579,14 @@
               <div class="spec"><span class="value">580 CCA</span><span class="label">Partida a frio</span></div>
             </div>
             <p class="deep-desc">As baterias Heliar utilizam tecnologia cálcio-cálcio, que reduz a perda de água e garante maior vida útil. Disponíveis nas capacidades de 45Ah até 100Ah (12V). Ideal para veículos populares e médios. As correntes de partida variam de 370 CCA a 850 CCA conforme o modelo. Baixa autodescarga e resistência a vibrações.</p>
-            <a href="https://wa.me/5545999648025?text=Quero%20informações%20técnicas%20sobre%20Heliar" class="deep-cta" target="_blank">Consultar modelo exato</a>
+            <!-- CTA específico Heliar -->
+            <a href="https://wa.me/5545999648025?text=Olá!%20Quero%20comprar%20uma%20bateria%20Heliar%20específica%20para%20meu%20carro" class="btn-deep hel" target="_blank"><i class="fab fa-whatsapp"></i> Comprar Heliar</a>
+            <a href="https://wa.me/5545999648025?text=Olá!%20Tenho%20dúvidas%20sobre%20a%20bateria%20Heliar" class="btn-deep hel" target="_blank"><i class="fas fa-question-circle"></i> Dúvidas</a>
           </div>
           <div class="deep-image">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 100 80'%3E%3Crect x='10' y='10' width='80' height='60' rx='8' fill='%23c5221f' opacity='0.15'/%3E%3Crect x='20' y='20' width='60' height='40' rx='4' fill='%23c5221f' /%3E%3Ctext x='30' y='45' fill='white' font-size='16' font-weight='bold'%3EHeliar%3C/text%3E%3C/svg%3E" alt="Heliar">
+            <!-- INSTRUÇÃO: substitua src pelo caminho da imagem da Heliar -->
+            <img src="caminho/para/imagem-heliar.png" alt="Bateria Heliar">
+            <!-- LINHA ACIMA: coloque o caminho da imagem Heliar -->
           </div>
         </div>
 
@@ -584,10 +600,14 @@
               <div class="spec"><span class="value">680 CCA</span><span class="label">Partida a frio</span></div>
             </div>
             <p class="deep-desc">Tecnologia Moura Clean com liga chumbo-cálcio-estanho, oferecendo alta performance e durabilidade. Linha automotiva de 50Ah a 120Ah, com corrente de partida de 400 a 950 CCA. As baterias Moura possuem dupla vedação e tampas labirinto que previnem vazamentos. Indicadas para veículos nacionais e importados.</p>
-            <a href="https://wa.me/5545999648025?text=Quero%20informações%20técnicas%20sobre%20Moura" class="deep-cta" target="_blank">Saber mais</a>
+            <!-- CTA específico Moura -->
+            <a href="https://wa.me/5545999648025?text=Olá!%20Quero%20comprar%20uma%20bateria%20Moura%20para%20meu%20carro" class="btn-deep mou" target="_blank"><i class="fab fa-whatsapp"></i> Comprar Moura</a>
+            <a href="https://wa.me/5545999648025?text=Olá!%20Tenho%20dúvidas%20sobre%20a%20bateria%20Moura" class="btn-deep mou" target="_blank"><i class="fas fa-question-circle"></i> Dúvidas</a>
           </div>
           <div class="deep-image">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 100 80'%3E%3Crect x='10' y='10' width='80' height='60' rx='8' fill='%230e6b2b' opacity='0.15'/%3E%3Crect x='20' y='20' width='60' height='40' rx='4' fill='%230e6b2b' /%3E%3Ctext x='25' y='45' fill='white' font-size='16' font-weight='bold'%3EMoura%3C/text%3E%3C/svg%3E" alt="Moura">
+            <!-- INSTRUÇÃO: substitua src pelo caminho da imagem da Moura -->
+            <img src="caminho/para/imagem-moura.png" alt="Bateria Moura">
+            <!-- LINHA ACIMA: coloque o caminho da imagem Moura -->
           </div>
         </div>
 
@@ -601,10 +621,14 @@
               <div class="spec"><span class="value">800 CCA</span><span class="label">Partida a frio</span></div>
             </div>
             <p class="deep-desc">Linha Premium com tecnologia EFB (Enhanced Flooded Battery) e AGM (Absorbent Glass Mat) para veículos com sistema Start-Stop. Capacidade de 70Ah a 150Ah e altíssima corrente de partida (até 1050 CCA). Suporta ciclos profundos e recarga rápida. Ideal para carros de luxo, SUVs e híbridos leves.</p>
-            <a href="https://wa.me/5545999648025?text=Quero%20informações%20técnicas%20sobre%20a%20linha%20Premium" class="deep-cta" target="_blank">Consultar disponibilidade</a>
+            <!-- CTA específico Premium -->
+            <a href="https://wa.me/5545999648025?text=Olá!%20Quero%20comprar%20uma%20bateria%20Premium%20para%20meu%20carro" class="btn-deep pre" target="_blank"><i class="fab fa-whatsapp"></i> Comprar Premium</a>
+            <a href="https://wa.me/5545999648025?text=Olá!%20Tenho%20dúvidas%20sobre%20a%20bateria%20Premium" class="btn-deep pre" target="_blank"><i class="fas fa-question-circle"></i> Dúvidas</a>
           </div>
           <div class="deep-image">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 100 80'%3E%3Crect x='10' y='10' width='80' height='60' rx='8' fill='%23a86414' opacity='0.15'/%3E%3Crect x='20' y='20' width='60' height='40' rx='4' fill='%23a86414' /%3E%3Ctext x='20' y='45' fill='white' font-size='14' font-weight='bold'%3EPREMIUM%3C/text%3E%3C/svg%3E" alt="Premium">
+            <!-- INSTRUÇÃO: substitua src pelo caminho da imagem da Premium -->
+            <img src="caminho/para/imagem-premium.png" alt="Bateria Premium">
+            <!-- LINHA ACIMA: coloque o caminho da imagem Premium -->
           </div>
         </div>
       </div>
@@ -677,5 +701,12 @@
   });
 </script>
 
+<!-- INSTRUÇÕES GLOBAIS PARA IMAGENS:
+  - hero image: <img src="caminho/para/sua-imagem-principal.svg">
+  - imagem Heliar: <img src="caminho/para/imagem-heliar.png">
+  - imagem Moura: <img src="caminho/para/imagem-moura.png">
+  - imagem Premium: <img src="caminho/para/imagem-premium.png">
+  Substitua "caminho/para/" pelo diretório real onde suas imagens estão armazenadas.
+-->
 </body>
 </html>
