@@ -80,6 +80,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <!-- Fontawesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  /* CORREÇÃO: MENU FICA ACIMA DA BARRA DE SOCORRO */
+.nav-menu.active {
+  z-index: 10000 !important;
+}
+
+/* Ajuste para o link âncora não ficar escondido atrás da barra fixa */
+html {
+  scroll-padding-top: 50px; /* Compensa a barra fixa */
+  scroll-behavior: smooth;
+}
   <style>
     * {
       margin: 0;
@@ -581,6 +591,7 @@
         box-shadow: 0 12px 20px rgba(0,0,0,0.05);
         border-bottom: 1px solid var(--border-light);
       }
+      /* CORREÇÃO: MENU FICA ACIMA DA BARRA DE SOCORRO */
       .nav-menu.active {
         display: flex;
       }
@@ -898,8 +909,9 @@
     navMenu.classList.toggle('active');
   });
   
+  // FECHA O MENU AO CLICAR EM QUALQUER LINK
   document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
       if (window.innerWidth <= 768) {
         navMenu.classList.remove('active');
       }
