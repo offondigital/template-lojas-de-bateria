@@ -952,30 +952,7 @@
     <p>© 2025 Baterias Buffon · Energia com informação técnica · CNPJ 12.345.678/0001-90</p>
     <p style="margin-top:0.5rem;"><i class="fas fa-bolt"></i> Heliar · Moura · Premium · Atendimento em Cascavel e região</p>
   </div>
-</footer>
-
-<a href="https://wa.me/5545999648025?text=Olá!%20Preciso%20de%20informações" class="floating-wpp" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-<script>
-  const mobileMenu = document.getElementById('mobile-menu');
-  const navMenu = document.getElementById('nav-menu');
-  
-  mobileMenu.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
-  
-  // FECHA O MENU AO CLICAR EM QUALQUER LINK
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', (e) => {
-      if (window.innerWidth <= 768) {
-        navMenu.classList.remove('active');
-      }
-    });
-  });
-</script>
- <!-- Link solicitado -->
+   <!-- Link solicitado -->
         <div class="footer-credit">
             <p>Site feito por <a href="https://offondigital.github.io/site-com-ia/index.html" target="_blank" rel="noopener noreferrer">💎InovaMarketing</a></p>
         </div>
@@ -1020,5 +997,28 @@
         }
     }
 </style>
+</footer>
+
+<a href="https://wa.me/5545999648025?text=Olá!%20Preciso%20de%20informações" class="floating-wpp" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navMenu = document.getElementById('nav-menu');
+  
+  mobileMenu.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+  
+  // FECHA O MENU AO CLICAR EM QUALQUER LINK
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        navMenu.classList.remove('active');
+      }
+    });
+  });
+</script>
 </body>
 </html>
